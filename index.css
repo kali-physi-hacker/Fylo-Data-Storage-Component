@@ -59,12 +59,18 @@ body {
 }
 
 .icon-container {
+    cursor: pointer;
     background-color: var(--VeryDarkBlue);
     padding: 0.5em;
     border-radius: 0.6rem;
     width: 60px;
     height: 60px;
     margin-right: 1rem;
+    transition: all 0.5 ease-in;
+    /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); */
+}
+
+.icon-container:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
@@ -87,7 +93,7 @@ body {
     min-width: 600px;
     padding: 2em 1em;
     position: relative;
-    top: 40%;
+    top: 13%;
 }
 
 .bold {
@@ -155,12 +161,13 @@ body {
 .progress-bg::after {
     content: "";
     position: absolute;
-    width: 14px;
-    height: 14px;
+    width: 12px;
+    height: 12px;
     background: white;
+    border: 2px solid var(--VeryDarkBlue);
     right: 0;
     border-radius: 50%;
-    margin-right: 2px;
+    margin-right: 0px;
 }
 
 .progress-bar-mark {
@@ -182,4 +189,66 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -1;
+}
+
+@media (max-width: 375px) {
+    body {
+        background-image: url('images/bg-mobile.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .container {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .left {
+        min-width: 90vw;
+        border-top-left-radius: 0.5rem;
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+    }
+
+    .icon-container {
+        width: 50px;
+        height: 50px;
+    }
+
+    .icon-container img {
+        width: 1.5rem;
+    }
+
+    .fylo {
+        margin: 0.4rem 3rem;
+    }
+
+    .fylo img {
+        transform: scale(1);
+        margin-left: -2rem;
+    }
+
+    .icons {
+        margin: 1.5rem 1rem 0 1rem;
+    }
+
+    .progress-bar {
+        min-width: 90vw;
+        border-radius: 0.5rem;
+    }
+
+    .progress-note-container{
+        bottom: 0%;
+        top: 85%;
+        right: 30%;
+    }
+
+    .progress-note {
+        border-radius: 0.7rem;
+    }
+
+    .pointy {
+        display: none;
+    }
 }
