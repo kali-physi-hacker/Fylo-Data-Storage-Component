@@ -90,6 +90,11 @@ body {
     top: 40%;
 }
 
+.bold {
+    font-weight: 900;
+    font-size: 20px;
+}
+
 .progress-bar-title {
     color: white;
 }
@@ -107,25 +112,29 @@ body {
     padding: 1rem;
     background: white;
     color: #222;
-    font-size: 20px;
-    font-weight: bolder;
+}
+
+.progress-note span {
+    font-size: 2rem;
+    font-weight: 900;
 }
 
 .pointy {
     position: absolute;
-    top: 10%;
+    top: 15%;
     right: 5%;
-    border-bottom: 20px solid transparent;
+    /* border-bottom: 20px solid transparent; */
     border-right: 20px solid #fff;
     width: 20px;
     height: 20px;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%);
 }
 
 
 .progress {
     width: 100%;
     background-color: var(--VeryDarkBlue);
-    height: 16px;
+    height: 20px;
     display: flex;
     align-items: center;
     border-radius: 2rem;
@@ -133,9 +142,10 @@ body {
 }
 
 .progress-bg {
+    margin-left: 2px;
     display: flex;
     align-items: center;
-    height: 12px;
+    height: 16px;
     width: 70%;
     background: var(--gradient);
     border-radius: 2rem;
@@ -145,11 +155,12 @@ body {
 .progress-bg::after {
     content: "";
     position: absolute;
-    width: 10px;
-    height: 10px;
+    width: 14px;
+    height: 14px;
     background: white;
     right: 0;
     border-radius: 50%;
+    margin-right: 2px;
 }
 
 .progress-bar-mark {
